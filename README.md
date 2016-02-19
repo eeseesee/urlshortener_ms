@@ -1,6 +1,6 @@
 #URL Shortener Microservice
 
-A full stack JavaScript app built using Node.js, and Express, with Bootstrap for the (minimal!) front end, that fulfills the following user stories:
+A full stack JavaScript app built using Node.js, Express, MongoDB, and Mongoose, with Bootstrap for the (minimal!) front end, and Mocha for testing that fulfills the following user stories:
 
 1. User Story: I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
 
