@@ -1,16 +1,18 @@
-var dbURI    = 'mongodb://localhost/test',
-  expect = require('chai').expect,
-  mongoose = require('mongoose'),
-  clearDB = require('mocha-mongoose')(dbURI, {noClear: true});
+require("dotenv").load();
 
-var ServiceController = require(process.cwd()+'/app/controllers/serviceController.js');
+var mongoUri = process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || "mongodb://localhost/test",
+  expect = require("chai").expect,
+  mongoose = require("mongoose"),
+  clearDB = require("mocha-mongoose")(mongoUri, {noClear: true});
+
+var ServiceController = require(process.cwd()+"/app/controllers/serviceController.js");
 
 describe("serviceController", function() {
 
     var serviceController;
 
     before(function(done) {
-      var connection = mongoose.connect(dbURI);
+      var connection = mongoose.connect(mongoUri);
       serviceController = new ServiceController();
       mongoose.connection.on("connected", function() {
         console.log("test connection successful");
