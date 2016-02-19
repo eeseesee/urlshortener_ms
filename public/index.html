@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timestamp microservice</title>
+  <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+  <script src="/public/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class = "container">
+    <h1>API URL Shortener Microservice</h1>
+    <p>Full stack Javascript app built with node.js, express.js, and Bootstrap by <a href="https://github.com/eeseesee">ECC</a></p>
+    <blockquote>
+                User stories:
+                <ul>1) I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</ul>
+                <ul>2) If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</ul>
+                <ul>3) When I visit that shortened URL, it will redirect me to my original link.</ul>
+            </blockquote>
+    <h3>Example usage:</h3>
+            <code>https://ecc-urlshortener-ms-ms.herokuapp.com/new/http://freecodecamp.com/news</code><br>
+            <h3>Example output:</h3>
+            <code>
+                { "original_url": "http://freecodecamp.com/news", "short_url": "https://ecc-urlshortener-ms.herokuapp.com/4" }
+            </code>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "urlshortener_ms",
+  "version": "0.0.1",
+  "description": "fcc api project url shortener microservice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha test"
+  },
+  "author": "ECC",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.4",
+    "valid-url": "^1.0.9"
+  },
+  "engines": {
+    "npm": "2.14.12",
+    "node": "4.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "mocha-mongoose": "^1.1.1",
+    "mongodb": "^2.1.7"
+  }
+}
