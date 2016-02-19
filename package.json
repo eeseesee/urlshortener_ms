@@ -20,6 +20,7 @@
     "node": "4.3.0"
   },
   "devDependencies": {
+    "dotenv": "^2.0.0",
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
     "mocha-mongoose": "^1.1.1",
