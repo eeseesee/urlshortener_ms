@@ -6,6 +6,8 @@ var express = require('express'),
 
 var app = express();
 
+var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/test';
+
 mongoose.connect('mongodb://localhost/test', function(err) {
     if(err) {
         console.log('connection error', err);
