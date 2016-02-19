@@ -9,13 +9,13 @@ function ServiceHandler () {
 		var serviceController = new ServiceController();
 
 		var url = req.params[0];
-		//var baseUrl = "://" + req.headers.host;
+		var baseUrl = "http://" + req.headers.host;
 
 		serviceController.shortenUrl(url, function(newUrl){
 			if (!newUrl){
 				return res.json({"error": "Invalid URL"})
 			}
-			res.json({"original_url": newUrl.url, "alternative_url": "/" + newUrl.extension});
+			res.json({"original_url": newUrl.url, "alternative_url": baseUrl + "/" + newUrl.extension});
 		});
 	}
 
@@ -30,7 +30,7 @@ function ServiceHandler () {
 				return res.json({"error": "No url found for given input"})
 			}
 
-			res.redirect('http://' + oldUrl.url);
+			res.redirect(oldUrl.url);
 		});
 
 	}
